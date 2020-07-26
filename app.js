@@ -24,14 +24,6 @@ app.use(passport.session());
 mongoose.connect("mongodb+srv://admin-muskan:"+process.env.PASSWORD+"@cluster0.bmbo9.mongodb.net/eisenDB", {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.set("useCreateIndex", true);
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-
-app.listen(port, function (){
-  console.log("server started on port 3000");
-});
 
 
 const itemsSchema=new mongoose.Schema({
@@ -208,4 +200,14 @@ app.post("/register", function(req, res){
       });
     }
   });
+});
+
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function (){
+  console.log("server started on port 3000");
 });
