@@ -13,8 +13,9 @@ a:hover   {color:#A683E3;}
 .headers {
   background-color: #A683E3;
   margin: auto -16px;
-  padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  padding-right: 3.25rem;
+  padding-left: 3.25rem;
 }
 .checkclass{
   max-width: 400px;
@@ -29,6 +30,7 @@ a:hover   {color:#A683E3;}
   color: white;
   font-family: "McLaren", cursive;
   font-weight: 200;
+  padding-left: 3.25rem;
 }
 
 /* new day add button */
@@ -67,9 +69,7 @@ a:hover   {color:#A683E3;}
   border-radius: 5px;
   padding: 0.25rem;
 }
-checkbox{
-  border-radius: 5px;
-}
+
 /* martix*/
 .data {
   max-width: 600px;
@@ -112,7 +112,9 @@ footer p {
   color: #ccc;
 }
 
-
+.row{
+  padding-left: auto;
+}
 .social-icon{
   margin: 20px 10px;
 }
@@ -132,14 +134,14 @@ td{
 }
 
 .esienmat{
-  height: 40rem;
-  width: 50rem;
+  height: 35rem;
+  width: 45rem;
   margin-right: 6.25rem;
 }
 
 .esientext{
   height: 35rem;
-  width: 25rem;
+  width: 22rem;
   margin-left: 15.25rem;
 }
 
@@ -154,6 +156,8 @@ td{
     height: 25rem;
     width: 15rem;
     margin-left: 3.25rem;
+    padding-top: 50px;
+
   }
 }
 
@@ -162,9 +166,26 @@ td{
 }
 
 p{
-  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .shortcsreen {
   margin-bottom: 40px;
+}
+
+.lastbtn{
+  padding-right: 3.25rem;
+}
+
+.logreg{
+margin-left: 1rem;
+}
+
+.logregform{
+  margin: auto;
+}
+
+.headoflogreg{
+  text-align: center;
+  padding-bottom: 2rem;
 }
