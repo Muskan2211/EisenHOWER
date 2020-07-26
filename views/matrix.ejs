@@ -1,0 +1,101 @@
+<%- include("header") -%>
+
+  <div class="contaier-fluid">
+
+    <!--<div>
+	    <button type="submit" name="button" class="newday">+</button>
+    </div>-->
+
+    <div class="box headmany">
+      <h1> <%=datemat%></h1>
+    </div>
+
+    <div class="row mrow">
+      <div class="shortcsreen col-lg-6">
+			  <table>
+  				<tr>
+  					<td bgcolor=#A3F7BF >
+              <% newListItems.forEach(function(item){ %>
+                <% if(item.urgent=="yes" && item.imp=="yes" ){%>
+                  <form action="/delete" method="post">
+                    <div class="data">
+                      <input type="checkbox" onChange="this.form.submit()" name="matrixbox" value="<%=item._id%>">
+                      <p><%=item.name%></p>
+                    </div>
+                  </form>
+                <% } %>
+              <%});%>
+    				</td>
+  					<td bgcolor=#05DFD7>
+              <% newListItems.forEach(function(item){ %>
+                <% if(item.urgent=="no" && item.imp=="yes" ){%>
+                  <form action="/delete" method="post">
+                    <div class="data">
+                      <input type="checkbox" onChange="this.form.submit()" name="matrixbox" value="<%=item._id%>">
+                      <p><%=item.name%></p>
+                    </div>
+                  </form>
+                <% } %>
+              <%});%>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td bgcolor=#F35588>
+              <% newListItems.forEach(function(item){ %>
+                <% if(item.urgent=="yes" && item.imp=="no" ){%>
+                  <form action="/delete" method="post">
+                    <div class="data">
+                      <input type="checkbox" onChange="this.form.submit()" name="matrixbox" value="<%=item._id%>">
+                      <p><%=item.name%></p>
+                    </div>
+                  </form>
+                <% } %>
+              <%});%>
+  					</td>
+  					<td bgcolor=#FFF591>
+              <% newListItems.forEach(function(item){ %>
+                <% if(item.urgent=="no" && item.imp=="no" ){%>
+                  <form action="/delete" method="post">
+                    <div class="data">
+          						<input type="checkbox" onChange="this.form.submit()" name="matrixbox" value="<%=item._id%>">
+          						<p><%=item.name%></p>
+        						</div>
+                  </form>
+                <% } %>
+              <%});%>
+  					</td>
+  				</tr>
+			</table>
+      </div>
+      <div class="col-lg-6">
+        <form class="secondform " action="/matrix" method="post">
+  				<table>
+  					<tr>
+  						<td>
+  							 <div class="headmany">
+  								<h5> TASK</h5>
+  							 </div>
+  						</td>
+  						<td>
+  							<div class="headmany">
+  								<h5>IMPORTANT</h5>
+  							 </div>
+  						</td>
+  						<td>
+  							<div class=" headmany">
+  								<h5> URGENT</h5>
+  							 </div>
+  						</td>
+  					</tr>
+  					<tr>
+                <td><input class="headymanyform" type="text" name="tasktodoform" autocomplete="off"></td>
+                <td><input class="checkclass" type="checkbox" name="importantform"></td>
+                <td><input  class="checkclass" type="checkbox" name="urgentform"></td>
+  					</tr>
+  				</table>
+			    <button type="submit" class="newday"> + </button>
+        </form>
+      </div>
+    </div>
+  </div>
+<%- include("footer") -%>

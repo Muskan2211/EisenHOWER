@@ -1,0 +1,170 @@
+
+body{
+  background: : #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+}
+
+a:link {color:grey;}
+a:visited {color:black;}
+a:hover   {color:#A683E3;}
+
+
+/* heading of the page */
+.headers {
+  background-color: #A683E3;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.checkclass{
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  min-height: 70px;
+  display: flex;
+}
+.heading {
+  color: white;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+/* new day add button */
+.newday {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+  margin: 20px auto 20px 50%;
+}
+
+/* date*/
+.box {
+  max-width: 300px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+
+}
+.headmany {
+  background-color: #A683E3;
+  text-align: center;
+  color:white;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+
+.headymanyform{
+
+  border-color: #A683E3;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+checkbox{
+  border-radius: 5px;
+}
+/* martix*/
+.data {
+  max-width: 600px;
+  margin: 2px auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #F1F1F1;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: white;
+}
+
+input[type="checkbox"] {
+  margin: 5px 5px 5px 10px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+
+/* footersection */
+footer {
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: #ccc;
+}
+
+
+.social-icon{
+  margin: 20px 10px;
+}
+
+table{
+	border-spacing: 20px 0;
+}
+
+td{
+  padding: 5px;
+}
+
+.mrow{
+  padding-left: 3.5rem;
+  padding-top: 1.875rem;
+  padding-right: 3.5rem;
+}
+
+.esienmat{
+  height: 40rem;
+  width: 50rem;
+  margin-right: 6.25rem;
+}
+
+.esientext{
+  height: 35rem;
+  width: 25rem;
+  margin-left: 15.25rem;
+}
+
+
+@media (max-width: 700px){
+  .esienmat{
+    height: 25rem;
+    width: 25rem;
+    margin-right: 3.25rem;
+  }
+  .esientext{
+    height: 25rem;
+    width: 15rem;
+    margin-left: 3.25rem;
+  }
+}
+
+.secondform{
+  padding-left: 100px;
+}
+
+p{
+  padding-left: 10px;
+}
+
+.shortcsreen {
+  margin-bottom: 40px;
+}
