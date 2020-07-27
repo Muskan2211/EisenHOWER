@@ -1,6 +1,6 @@
 
 body{
-  background: : #eee;
+  background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
@@ -188,4 +188,9 @@ margin-left: 1rem;
 .headoflogreg{
   text-align: center;
   padding-bottom: 2rem;
+}
+@media (max-width: 991px){
+  .mmargin{
+    margin-left: 3.25rem;
+  }
 }

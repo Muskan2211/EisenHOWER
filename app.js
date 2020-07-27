@@ -61,9 +61,10 @@ var options = {
 };
 var date=today.toLocaleDateString("en-US");
 var year=today.getFullYear();
+var islogin=false;
 
 app.get("/", function(req, res){
-  res.render("informationpage", {yearmat:year});
+  res.render("informationpage", {yearmat:year, btntype:islogin});
 });
 
 
@@ -82,15 +83,16 @@ app.post("/delete", function(req, res){
 });
 //req.user.todos.id
 app.get("/login", function(req, res){
-  res.render("login", {yearmat:year});
+  res.render("login", {yearmat:year, btntype:islogin});
 });
 
 app.get("/register", function(req, res){
-  res.render("register",{yearmat:year});
+  res.render("register",{yearmat:year, btntype:islogin});
 });
 
 app.get("/matrix", function(req, res){
   if(req.isAuthenticated()){
+    islogin=true;
     Item.findById(req.user.id, function(err, foundUser){
       if(err){
         console.log(err);
@@ -100,7 +102,8 @@ app.get("/matrix", function(req, res){
           res.render("matrix",{
             datemat:date,
             yearmat:year,
-            newListItems: foundUser.todos
+            newListItems: foundUser.todos,
+            btntype:islogin
           });
         }
       }
@@ -170,6 +173,7 @@ app.post("/matrix", function(req, res){
 
 app.get("/logout", function(req, res){
   req.logout();
+  islogin=false;
   res.redirect("/");
 });
 
